@@ -1,0 +1,3 @@
+
+£%squid:RedundantThrowsDeclarationCheck"mRemove the declaration of thrown exception 'com.google.gson.JsonParseException' which is a runtime exception.(—ŒÑÿÿÿÿÿ
+wsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(®•öşÿÿÿÿ

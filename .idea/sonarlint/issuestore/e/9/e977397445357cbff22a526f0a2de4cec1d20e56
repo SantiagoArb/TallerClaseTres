@@ -1,0 +1,21 @@
+
+ksquid:HiddenFieldCheckW"=Rename "rowMapper" which hides the field declared at line 30.(¨•Ãáıÿÿÿÿ8øÅ×›.
+Psquid:S1068"-Remove this unused "rowMapper" private field.(öòÃ€øÿÿÿÿ8øÅ×›.
+usquid:S00117h"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Û»­§üÿÿÿÿ8øÅ×›.
+esquid:S1192""NDefine a constant instead of duplicating this literal "TASAIMPUESTOS" 3 times.(¹Î•
+usquid:S00117V"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Äüû÷øÿÿÿÿ8øÅ×›.
+rsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(äã¤ª
+V
+squid:S106v"9Replace this use of System.out or System.err by a logger.(·Ï—8øÅ×›.
+psquid:S00117}"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¯ñ¿Ù8øÅ×›.
+csquid:S1192 "LDefine a constant instead of duplicating this literal "DESCRIPCION" 3 times.(ëÛ—Ò
+^squid:S1192"GDefine a constant instead of duplicating this literal "NOMBRE" 3 times.(¬×ÎÓ
+usquid:S00117+"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Â²£ëûÿÿÿÿ8øÅ×›.
+fsquid:HiddenFieldCheck@"=Rename "rowMapper" which hides the field declared at line 30.(èíğ×8øÅ×›.
+nsquid:CommentedOutCodeLine,"<This block of commented-out lines of code should be removed.(ïÕéÜıÿÿÿÿ8øÅ×›.
+lsquid:S1192$"IDefine a constant instead of duplicating this literal "CANTINVE" 3 times.(á™–ıÿÿÿÿ8øÅ×›.
+nsquid:CommentedOutCodeLinei"<This block of commented-out lines of code should be removed.(ïÕéÜıÿÿÿÿ8øÅ×›.
+psquid:S00117>"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ôÜ¶Ş8øÅ×›.
+bsquid:S1192!"KDefine a constant instead of duplicating this literal "PRECIOBASE" 3 times.(û¬³»
+csquid:S1192#"GDefine a constant instead of duplicating this literal "ESTADO" 3 times.(­ª÷ûÿÿÿÿ
+‡squid:S1488a"dImmediately return this expression instead of assigning it to the temporary variable "productsList".(Ìú»¨ûÿÿÿÿ8øÅ×›.
