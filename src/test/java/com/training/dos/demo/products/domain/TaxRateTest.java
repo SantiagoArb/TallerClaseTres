@@ -5,19 +5,19 @@ import org.junit.jupiter.api.DynamicTest;
 import org.junit.jupiter.api.TestFactory;
 import org.junit.jupiter.api.function.Executable;
 
-import java.util.EmptyStackException;
+import java.math.BigDecimal;
 import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class InventoryQuantityTest {
+class TaxRateTest {
     @TestFactory
     @DisplayName("Deberia Pasar")
     Stream<DynamicTest> validTest(){
-        return Stream.of(35,3500,1)
+        return Stream.of(BigDecimal.valueOf(0.1),BigDecimal.valueOf(0.5),BigDecimal.valueOf(1))
                 .map(value -> {
                     String testname = String.format("deberia ser valido para: ", value);
-                    Executable executable = () -> InventoryQuantity.of(value);
+                    Executable executable = () -> TaxRate.of(value);
                     return DynamicTest.dynamicTest(testname, () -> {
                         assertAll(
                                 () -> assertDoesNotThrow(executable),
@@ -30,18 +30,19 @@ class InventoryQuantityTest {
     @TestFactory
     @DisplayName("Deberia Fallar")
     Stream<DynamicTest> invalidTest(){
-        return Stream.of(-5,Integer.min(-1,1),null)
+        return Stream.of(BigDecimal.valueOf(-1), BigDecimal.valueOf(1.1),null)
                 .map(value -> {
                     String testname = String.format("deberia ser valido para: ", value);
-                    Executable executable = () -> InventoryQuantity.of(value);
+                    Executable executable = () -> TaxRate.of(value);
                     return DynamicTest.dynamicTest(testname, () -> {
                         if(value == null ){
                             assertThrows(NullPointerException.class,executable);
                         }else{
-                                assertThrows(IllegalArgumentException.class,executable);
-                         }
+                            assertThrows(IllegalArgumentException.class,executable);
+                        }
                     });
                 });
     }
+
 
 }

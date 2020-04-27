@@ -41,7 +41,7 @@ class NameTest {
                             assertThrows(NullPointerException.class,executable);
                         }else{
                             if (desc.isEmpty()){
-                                assertThrows(EmptyStackException.class,executable);
+                                assertThrows(IllegalArgumentException.class,executable);
                             }else{
                                 assertThrows(NumberFormatException.class,executable);
                             }

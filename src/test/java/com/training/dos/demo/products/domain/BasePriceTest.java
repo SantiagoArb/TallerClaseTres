@@ -33,7 +33,7 @@ class BasePriceTest {
     @TestFactory
     @DisplayName("Deberia Fallar")
     Stream<DynamicTest> invalidTest(){
-        return Stream.of(BigDecimal.ZERO, BigDecimal.valueOf(0.99),null)
+        return Stream.of(BigDecimal.valueOf(-2), BigDecimal.valueOf(-1.1),null)
                 .map(decimal -> {
                     String testname = String.format("deberia ser valido para: ", decimal);
                     Executable executable = () -> BasePrice.of(decimal);
@@ -41,7 +41,7 @@ class BasePriceTest {
                         if(decimal == null ){
                             assertThrows(NullPointerException.class,executable);
                         }else{
-                            assertThrows(NumberFormatException.class,executable);
+                            assertThrows(IllegalArgumentException.class,executable);
                         }
                     });
                 });

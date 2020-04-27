@@ -1,8 +1,9 @@
 package com.training.dos.demo.products.domain;
 
+import com.google.common.base.Preconditions;
 import com.training.dos.demo.products.Serialization.StringSerializable;
-import com.training.dos.demo.products.common.Preconditions;
 import lombok.Value;
+import org.apache.commons.lang3.StringUtils;
 
 
 @Value(staticConstructor = "of")
@@ -12,8 +13,9 @@ public class Description implements StringSerializable {
 
     public Description(String value) {
         Preconditions.checkNotNull(value);
-        Preconditions.checkNotEmpty(value);
-        Preconditions.checkMaxCharacters(value,280);
+        Preconditions.checkArgument(StringUtils.isNotBlank(value), "Product description can't be blank");
+        Preconditions.checkArgument(StringUtils.length(value) <= 280, "Product description can not be longer than 280");
+
         this.value = value;
     }
 

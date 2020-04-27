@@ -2,7 +2,7 @@ unidad: MINUTOS
 
 spring:
   profiles:
-    active: dev
+    active: dev-test
 server:
   port: 8080
 
