@@ -37,9 +37,6 @@ class ProductControllerTest {
 
     @MockBean
     ProductsService services;
-    @Test
-    void insertOne() {
-    }
 
     @Test
     void findProductEmpty() throws Exception {
@@ -222,7 +219,7 @@ class ProductControllerTest {
 
         MockHttpServletRequestBuilder servletRequestBuilder = MockMvcRequestBuilders.put("/api/v1/products/1")
                 .contentType(MediaType.APPLICATION_JSON)
-                .param("id","1")
+                .param("id",String.valueOf(1))
                 .content(requestJson);
         this.mockMvc.perform(servletRequestBuilder)
                 .andDo(print())
