@@ -20,7 +20,7 @@ public class ProductController {
     private final ProductsService service;
 
 
-    @PostMapping
+        @PostMapping("/")
         public ResponseEntity<ProductOperation> insertOne(@RequestBody ProductOperationRequest operationRequest) {
         ProductOperation respuesta = service.insertOne(operationRequest.getName(), operationRequest.getDescription(), operationRequest.getBasePrice(), operationRequest.getTaxRate(),
                 operationRequest.getProductStatus(), operationRequest.getInventoryQuantity());
@@ -43,9 +43,14 @@ public class ProductController {
     }
 
     @GetMapping
-    public List<Product> findAll() {
+    public ResponseEntity<List<Product>> findAll() {
         System.out.println("findall");
-        return service.findAll();
+       List list =  service.findAll();
+        if(list.isEmpty()){
+            return ResponseEntity.status(HttpStatus.NO_CONTENT).body(list);
+        }else{
+            return ResponseEntity.ok(list);
+        }
     }
 
     @PutMapping("/{id}")

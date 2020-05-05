@@ -6,11 +6,11 @@ import com.training.dos.demo.products.exceptions.ProductException;
 import lombok.Value;
 
 @Value(staticConstructor = "of")
-public class ProductOperationFailture implements ProductOperation {
+public class ProductOperationFailure implements ProductOperation {
 
     ProductDoesNotExist exception;
     @Override
-    public ProductOperationRequest value() {
+    public Product value() {
         return null;
     }
 

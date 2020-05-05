@@ -3,6 +3,7 @@ package com.training.dos.demo.configuration;
 import com.training.dos.demo.configuration.domain.DataSourceProperties;
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
@@ -12,12 +13,14 @@ import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType;
 import javax.sql.DataSource;
 
 @Configuration
+@EnableConfigurationProperties(DataSourceProperties.class)
 public class DataSourceConfiguration {
 
     @Bean
-    @Profile({"prod", "dev"})
+    @Profile({"dev"})
     public DataSource postgresDataSource(DataSourceProperties properties) {
         String url = String.format("jdbc:postgresql://%s:%s/%s", properties.getHost(), properties.getPort(), properties.getDb());
+        System.out.println(url);
         HikariConfig config = new HikariConfig();
         config.setJdbcUrl(url);
         config.setUsername(properties.getUsername());

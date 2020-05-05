@@ -26,8 +26,8 @@ public class ProductsService {
     }
 
     public ProductOperation findById(Long id) {
-        ProductOperation resp = sqlProductsRepository.findById(id);
-        return resp;
+        ProductOperation a  = sqlProductsRepository.findById(id);
+        return a;
     }
 
     public List<Product> findAll() {

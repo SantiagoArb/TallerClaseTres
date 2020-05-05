@@ -6,10 +6,10 @@ import lombok.Value;
 @Value(staticConstructor = "of")
 public class ProductOperationSuccess implements ProductOperation {
 
-    ProductOperationRequest product;
+    Product product;
 
     @Override
-    public ProductOperationRequest value() {
+    public Product value() {
         return product;
     }
 
@@ -20,6 +20,6 @@ public class ProductOperationSuccess implements ProductOperation {
 
     @Override
     public Boolean isValid() {
-        return true;
+            return true;
     }
 }

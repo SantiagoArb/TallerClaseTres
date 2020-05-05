@@ -4,7 +4,7 @@ import com.training.dos.demo.products.exceptions.ProductException;
 
 public interface ProductOperation {
 
-    ProductOperationRequest value();
+    Product value();
 
     ProductException failure();
 
